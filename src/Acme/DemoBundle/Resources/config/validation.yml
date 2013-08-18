@@ -1,0 +1,10 @@
+Acme\DemoBundle\Model\Contact:
+    constraints:
+        - Callback:
+            methods: [formPathError]
+    properties:
+        email:
+            - NotBlank: ~
+            - Email: ~
+        message:
+            - NotBlank: ~
