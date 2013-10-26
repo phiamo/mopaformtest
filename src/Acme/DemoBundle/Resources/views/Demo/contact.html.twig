@@ -3,13 +3,15 @@
 {% block title "Symfony - Contact form" %}
 
 {% block content %}
-    <form action="{{ path('_demo_contact') }}" method="POST" id="contact_form" novalidate="novalidate">
+    <form class="form-horizontal" action="{{ path('_demo_contact') }}" method="POST" id="contact_form" novalidate="novalidate">
         {{ form_errors(form) }}
 
         {{ form_row(form.email) }}
         {{ form_row(form.message) }}
 
         {{ form_rest(form) }}
-        <input type="submit" value="Send" class="symfony-button-grey" />
+          <div class="control-group">
+                <input type="submit" value="Send" class="symfony-button-grey btn" />
+          </div>
     </form>
 {% endblock %}
